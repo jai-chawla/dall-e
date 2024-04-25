@@ -12,7 +12,7 @@ const app=express();
 app.use(cors({
   origin:["https://dall-e-client-three.vercel.app"],
   methods:["POST", "GET"],
-  credentials: true
+  credentials: true,
 }
 ));
 
