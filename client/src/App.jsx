@@ -6,10 +6,12 @@ import { logo } from "./assets";
 const App = () => {
   return (
     <BrowserRouter>
-      <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">
+      <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4] ">
         <Link to="/">
-          <img src={logo} alt="logo" className="w-28 object-contain"/>
+          <img src={logo} alt="logo" className="w-20 object-contain"/>
+          {/* <h1>Want an AI Generated Image? Just say it</h1> */}
         </Link>
+        <h1 className="text-3xl tracking-widest">WELCOME</h1>
 
         <Link to="/create-post" className="font-inter font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md">Create</Link>
       </header>

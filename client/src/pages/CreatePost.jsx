@@ -20,7 +20,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/dalle',{
+        const response = await fetch('http://localhost:8080/api/v1/dalle/cool',{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -29,9 +29,10 @@ const CreatePost = () => {
         });
 
         const data = await response.json();
-        // console.log(data);
+        console.log(data);
 
-        setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}`});
+        // setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}`});
+        setForm({...form, photo:data.imageUrl});
       } catch (error) {
         alert(error);
       } finally {
@@ -59,7 +60,7 @@ const CreatePost = () => {
         await response.json();
         navigate('/');
       } catch (err) {
-        alert(error)
+        alert(err)
       }finally{
         setLoading(false);
       }
