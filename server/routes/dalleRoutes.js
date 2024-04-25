@@ -29,7 +29,6 @@ router.route('/').post(async (req, res) => {
     const apiResponse = await fetch(apiUrl, {
       method: 'POST',
       headers: {
-        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         'X-Api-Version': 'v1',
         Accept: 'application/json',
