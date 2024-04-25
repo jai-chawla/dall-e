@@ -20,7 +20,7 @@ router.route('/').get((req, res) => {
   res.send('Hello from DALL-E');
 });
 
-router.route('/cool').post(async (req, res) => {
+router.route('/').post(async (req, res) => {
   const apiUrl = 'https://api.limewire.com/api/image/generation';
   const apiKey= process.env.API_KEY;
   try{
