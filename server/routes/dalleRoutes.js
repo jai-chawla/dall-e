@@ -32,7 +32,7 @@ router.route('/').post(async (req, res) => {
         'Content-Type': 'application/json',
         'X-Api-Version': 'v1',
         Accept: 'application/json',
-        Authorization: `Bearer ${apiKey}`
+        Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify(req.body)
 
