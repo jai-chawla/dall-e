@@ -9,11 +9,11 @@ dotenv.config();
 
 const app=express();
 
-app.use(cors({
-  origin:"https://dall-e-client-three.vercel.app",
-  methods:["GET","POST"]
-}
-));
+// app.use(cors({
+//   origin:"https://dall-e-client-three.vercel.app",
+//   methods:["GET","POST"]
+// }
+// ));
 
 // app.use(cors());
 app.use(express.json({limit:'50mb'}));
