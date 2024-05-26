@@ -6,7 +6,7 @@ import postRoutes from './routes/postRoutes.js'
 import dalleRoutes from './routes/dalleRoutes.js'
 import job from './cron.js'
 
-job.start();
+// job.start();
 dotenv.config();
 
 const app=express();
